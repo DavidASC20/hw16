@@ -14,7 +14,7 @@ int main(){
     if(forker && forker2){
         int status;
         int pid = wait(&status);
-        printf("forker %d finished, took %d seconds\n", pid, WEXITSTATUS);
+        printf("forker %d finished, took %d seconds\n", pid, WEXITSTATUS(status));
         return 0;
     }
 
